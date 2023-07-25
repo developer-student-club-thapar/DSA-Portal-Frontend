@@ -20,3 +20,10 @@ img {
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "GoogleSansDisplay";
+  src: url('./fonts/GoogleSansDisplay-Regular-v1.27.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

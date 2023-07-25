@@ -27,4 +27,71 @@
     width: 30%;
 }
 
+.whole{
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 40%;
+    font-family: 'GoogleSansDisplay';
+    font-weight: normal;
+    font-size: smaller;
+    color:  rgb(77, 75, 75);
+}
+
+.form{
+    width: 95%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block; 
+  border: 1px solid  rgb(77, 75, 75);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form2{
+    width: 45%;
+    margin: 8px 15px 5px 0px;
+}
+
+.form3{
+    position: absolute;
+    top: 0.2ex;
+    z-index: 1;
+    left: 0.5em;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.form4{
+    left: 16.4em;
+}
+
+.form5{
+    top: 10.7ex;    
+}
+
+.form6{
+    top: 22.4ex;
+}
+
+.form7{
+    top: 33.5ex;
+}
+
+.Submit{
+    background-color: #81C784;
+  border-radius: 10px;
+  border-color: #81C784;
+  width: 27.5vw;
+  color: black;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  bottom: 20%;
+  left: 39.8%;
+  position: absolute;
+  font-family: 'GoogleSansDisplay';
+  font-weight: normal;
+}
+
+
 

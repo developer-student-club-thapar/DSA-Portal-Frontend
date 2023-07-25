@@ -1,16 +1,39 @@
-import {Fragment} from 'react';
-import './Signup.css';
+import { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Signup.css";
 import logo from "./Assets/logo.png";
 import bg from "./Assets/BG.png";
 import kid from "./Assets/Component.png";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   return (
     <Fragment>
-      <h1 className='heading'>Create Account</h1>
+      <h1 className="heading">Create Account</h1>
+      <form className="whole">
+        <label htmlFor="fname" className="form3">First Name</label>
+        <input type="text" id="fname" name="fname" required className="form form2" />
+        <label htmlFor="lname" className="form3 form4">Last Name</label>
+        <input type="text" id="lname" name="lname" required className="form form2"/>
+        <br />
+        <label htmlFor="email" className="form3 form5">Email</label>
+        <br />
+        <input type="email" id="email" name="email" required className="form"/>
+        <br />
+        <label htmlFor="pwd" className="form3 form6">Password</label>
+        <br />
+        <input type="password" id="pwd" name="pwd" required className="form"/>
+        <br />
+        <label htmlFor="pwd" className="form3 form7">Confirm Password</label>
+        <br />
+        <input type="password" id="pwd" name="pwd" required className="form"/>
+        <br />
+      </form>
       <img src={logo} alt="" className="Logo" />
       <img src={bg} alt="" className="bg" />
       <img src={kid} alt="" className="Kid" />
+      <button onClick={() => navigate("/leaderboard")} className="Submit">Create Account</button>
     </Fragment>
   );
 };
