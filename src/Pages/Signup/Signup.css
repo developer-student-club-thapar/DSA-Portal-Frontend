@@ -84,14 +84,13 @@
   width: 27.5vw;
   color: black;
   padding: 16px 32px;
-  margin: 4px 2px;
+  margin: 15px 0px;
   cursor: pointer;
-  bottom: 20%;
-  left: 39.8%;
   position: absolute;
   font-family: 'GoogleSansDisplay';
   font-weight: normal;
 }
+
 
 
 
