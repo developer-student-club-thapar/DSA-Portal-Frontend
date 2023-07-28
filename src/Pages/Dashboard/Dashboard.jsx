@@ -1,5 +1,5 @@
-import {Fragment} from 'react';
-import './Dashboard.css';
+import { Fragment } from "react";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
