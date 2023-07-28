@@ -13,7 +13,7 @@ const Signup = () => {
     event.preventDefault();
     navigate('/leaderboard');
   };
-  
+
   return (
     <Fragment>
       <h1 className="heading">Create Account</h1>
@@ -60,13 +60,18 @@ const Signup = () => {
         <input type="submit" value="Create Account" className="Submit"></input>
         <br />
       </form>
+      <p className="Login">
+      Already have an account? <a href="./signin">Login</a>
+      </p>
+      
       <img src={logo} alt="" className="Logo" />
-      <img src={bg} alt="" className="bg" />
       <img src={kid} alt="" className="Kid" />
+      <img src={bg} alt="" className="bg" />
+      
+      
     </Fragment>
   );
 };
-
 export default Signup;
 
 

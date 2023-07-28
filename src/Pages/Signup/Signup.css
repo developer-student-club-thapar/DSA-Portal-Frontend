@@ -22,9 +22,9 @@
 
 .Kid{
     position: absolute;
-    bottom: 26%;
-    left: 1%;
-    width: 30%;
+    bottom: 15%;
+    left: 5%;
+    width: 35%;
 }
 
 .whole{
@@ -88,9 +88,22 @@
   cursor: pointer;
   position: absolute;
   font-family: 'GoogleSansDisplay';
-  font-weight: normal;
+  font-weight: bold;
+  font-size: larger;
 }
 
+.Login{
+    position: absolute;
+    margin: 8px 0;
+    margin-top: 36%;
+    margin-left: 40%;
+    font-family: 'GoogleSansDisplay';
+    font-weight: normal;
+}
+
+a{
+    color: #81C784;
+}
 
 
 
