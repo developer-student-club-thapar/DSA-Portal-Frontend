@@ -66,7 +66,7 @@ const Dashboard = () => {
             <div className="flex flex-row gap-2 md:justify-center md:pl-[60px] xl:justify-end xl:pl-0 pr-8 pt-4 text-center">
               <ul className="flex flex-row gap-8 ">
                 <li className="text-[20px] text-white bg-[#EA4335] p-2 rounded-xl w-44 cursor-pointer hover:text-[#EA4335] hover:bg-white">
-                  Leaderboard
+                  <a href="/leaderboard">Leaderboard</a>
                 </li>
                 <li className="text-[20px] text-white bg-[#0F9D58] p-2 rounded-xl w-44 cursor-pointer hover:text-[#0F9D58] hover:bg-white">
                   Problems
