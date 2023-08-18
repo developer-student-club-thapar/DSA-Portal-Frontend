@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    .leaderboard-buttons {
+      display: none;
+    }
+
+    .labels-container {
+        display: none;
+      }
+
+    .hr {
+        display: none;
+      }
+
+      .language{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+  }
+  
