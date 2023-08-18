@@ -32,7 +32,7 @@ const Dashboard = () => {
           </div>
           <div className="language mt-[40px]">
             <div className="font-bold text-2xl mt-4">Languages</div>
-            <div className="flex flex-col mt-4 gap-2 w-32 text-center">
+            <div className="flex lg:flex-col mt-4 gap-2 w-32 text-center language-inside">
               <div className="border-2 border-[#4285F4] p-4 rounded-3xl">
                 C++
               </div>
