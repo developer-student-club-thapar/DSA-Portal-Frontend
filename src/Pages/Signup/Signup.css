@@ -54,7 +54,7 @@
 
 .form3{
     position: absolute;
-    top: 0.2ex;
+    top: 0.05ex;
     z-index: 1;
     left: 0.5em;
     background-color: white;
@@ -62,19 +62,19 @@
 }
 
 .form4{
-    left: 16.4em;
+    left: 16.9em;
 }
 
 .form5{
-    top: 10.7ex;    
+    top: 11.7ex;    
 }
 
 .form6{
-    top: 22.4ex;
+    top: 24ex;
 }
 
 .form7{
-    top: 33.5ex;
+    top: 36.5ex;
 }
 
 .Submit{
@@ -102,8 +102,58 @@
 }
 
 a{
-    color: #81C784;
+    color: rgb(129, 199, 132);
 }
 
+.Or{
+    position: absolute;
+    left: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    .whole{
+        margin-top: 10%;
+        height: 4%;
+    }
+    .Login{
+        margin-top: 45%;
+    }
+    .Or{
+        width: 70vw;
+    }
+    .bg{
+        height: 125vh;
+        width: 29%;
+    }
+    .Kid{
+        width: 40%;
+        bottom: 0%;
+    }
+    .heading{
+        margin-top: 4%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Login{
+        margin-top: 58%;
+        margin-left: 50%;
+    }
+    .bg{
+        width: 43vw;
+        height: 110vh;
+    }
+    .whole{
+        margin-left: 50%;
+    }
+    .heading{
+        margin-left: 50%;
+    }
+    .Kid{
+        width: 55vw;
+        margin-top: 40%;
+    }
+
+}
 
 

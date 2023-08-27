@@ -57,11 +57,17 @@ const Signup = () => {
         <br />
         <input type="password" id="pwd" name="pwd" required className="form" />
         <br />
-        <input type="submit" value="Create Account" className="Submit"></input>
+        <br/>
+      <button class="inline-block w-full font-larger bg-green-500 hover:bg-green-600 text-grey font-bold py-2.5 border border-green-500 rounded">
+  Create Account
+</button>
         <br />
+        <br/>
       </form>
       <p className="Login">
-      Already have an account? <a href="./signin">Login</a>
+        <br/>
+      Already have an account? <a href="./signin" class="text-green-500 decoration-green-500 transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600 underline">Login</a>
+      
       </p>
       
       <img src={logo} alt="" className="Logo" />
