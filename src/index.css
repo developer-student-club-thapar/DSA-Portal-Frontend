@@ -17,3 +17,19 @@ img {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+@font-face {
+  font-family: "GoogleSansDisplay";
+  src: url('./fonts/GoogleSansDisplay-Bold-v1.27.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GoogleSansDisplay";
+  src: url('./fonts/GoogleSansDisplay-Regular-v1.27.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
