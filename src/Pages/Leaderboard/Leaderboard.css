@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #B5DBFA;
+}
+.sidebar{
+    display: flex;
+
+}
+.left-sidebar{
+    background-image: url(src/assets/left_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    width: 20%;
+
+}
+.right-sidebar{
+    flex-grow: 1;
+    background-color: white;
+    min-height: 100vh;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+}
+.logo-img{
+    height: 100px;
+    width: 100%;
+    margin-top: 50px;
+}
+.content-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left-sidebar-list{
+    margin-top: 130px;
+    margin-right: 50px;
+}
+.left-sidebar-list>ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
+i{
+    margin-right: 15px;
+}
+.list-items{
+    text-decoration: none;
+    font-size: 40px;
+    color: #434343;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+.left-moji-cover{
+    margin: 0;
+}
+.left-moji{
+    height: 400px;
+    width: 300px;
+    margin-top: 0px;
+}
+.right-sidebar{
+    padding: 30px;
+}
+.top-bar{
+    padding: 30px;
+    border-radius: 8px;
+    border-top-left-radius: 50px;
+    width: 900px;
+    display: flex;
+}
+.user-img{
+    margin-top: 15px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+p{
+    font-size: 25px;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+.bottom-bar{
+    margin-top: 30px;
+    height: 500px;
+    border-radius: 30px;
+}
+.bottom-list{
+    background-color: #848181;
+    padding: 10px;
+    border-radius: 10px;
+}
+.bottom-list-header{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #848181;
+}
+.bottom-list-items{
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Noto Sans Display', sans-serif;
+    background-color: #848181;
+
+}
