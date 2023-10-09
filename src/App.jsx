@@ -10,7 +10,12 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 export const CredentialsContext = React.createContext();
 
 function App() {
-  const credentialsState = useState(null);
+  const credentialsState = useState({
+    email: "",
+    password: "",
+    token: "",
+    check: false,
+  });
   return (
     <CredentialsContext.Provider value={credentialsState}>
       <Fragment>
