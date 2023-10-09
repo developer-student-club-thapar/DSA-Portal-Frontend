@@ -1,12 +1,13 @@
-import {Fragment} from 'react';
-import './Leaderboard.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Fragment } from "react";
+import "./Leaderboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faGear,
   faIdBadge,
   faMedal,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const LeaderboardCard = () => {
   return (
@@ -36,12 +37,12 @@ const LeaderboardCard = () => {
 
 const Leaderboard = () => {
   const tableHeads = [
-    'Rank',
-    'Profile',
-    'User ID',
-    'Speed',
-    'No.of Questions',
-    'Score',
+    "Rank",
+    "Profile",
+    "User ID",
+    "Speed",
+    "No.of Questions",
+    "Score",
   ];
   return (
     <Fragment>
@@ -53,13 +54,13 @@ const Leaderboard = () => {
           </div>
           {/* Sidebar menu */}
           <div className="flex flex-col gap-y-8 bg-transparent px-5 text-xl">
-            <a
-              href="/dashboard"
+            <Link
+              to="/dashboard"
               className="bg-transparent gap-x-4 flex items-center"
             >
-              <FontAwesomeIcon icon={faIdBadge} />
+              <FontAwesomeIcon icon={faBars} />
               Profile
-            </a>
+            </Link>
             <a
               href="/leaderboard"
               className="bg-transparent gap-x-4 flex items-center"
@@ -67,13 +68,13 @@ const Leaderboard = () => {
               <FontAwesomeIcon icon={faMedal} />
               Leaderboard
             </a>
-            <a
-              href="/problems"
+            <Link
+              to="/problems"
               className="bg-transparent gap-x-4 flex items-center"
             >
               <FontAwesomeIcon icon={faBars} />
               Problems
-            </a>
+            </Link>
             <a
               href="/settings"
               className="bg-transparent gap-x-4 flex items-center"
@@ -147,7 +148,7 @@ const Leaderboard = () => {
             </div>
             <div className="w-[25%] flex flex-col gap-y-2 bg-white">
               <div className="bg-[#B5DBFA] rounded-md md:rounded-tr-md rounded-tr-3xl p-4 text-center">
-                Rank:{' '}
+                Rank:{" "}
                 <span className="bg-[#66BB6A] lg:text-xl text-white rounded-full px-2 py-1">
                   #1
                 </span>
@@ -216,12 +217,12 @@ const Leaderboard = () => {
               </button>
               <div>Page 1 of 10</div>
               <button className="hover:bg-[#87b9f8] p-2 font-medium flex items-center rounded-md">
-                next{' '}
+                next{" "}
                 <img
                   src="src/assets/rightArrow.svg"
                   alt="next arrow"
                   className="bg-transparent ml-2"
-                />{' '}
+                />{" "}
               </button>
             </div>
           </div>

@@ -16,18 +16,16 @@ const Signin = () => {
 
   const handleLogin = async () => {
     await axios
-      .post("http://localhost:3000/api/auth/login", {
+      .post("http://localhost:1000/api/auth/login", {
         email: email,
         password: password,
       })
       .then((res) => {
         if (res.status === 200) {
-          const token = res.data;
-          const modifiedToken = token.split(" ");
-          setToken(modifiedToken[1]);
-          setCredentials(modifiedToken[1]);
+          setToken(res.data);
+          setCredentials(res.data);
           if (check) {
-            localStorage.setItem("token", modifiedToken[1]);
+            localStorage.setItem("token", token);
           }
         }
       })
@@ -36,6 +34,7 @@ const Signin = () => {
       })
       .catch((err) => {
         alert("Invalid Credentials");
+        console.log(err);
       });
   };
 
