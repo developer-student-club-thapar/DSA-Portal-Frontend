@@ -61,13 +61,13 @@ const Leaderboard = () => {
               <FontAwesomeIcon icon={faBars} />
               Profile
             </Link>
-            <a
-              href="/leaderboard"
+            <Link
+              to="/leaderboard"
               className="bg-transparent gap-x-4 flex items-center"
             >
               <FontAwesomeIcon icon={faMedal} />
               Leaderboard
-            </a>
+            </Link>
             <Link
               to="/problems"
               className="bg-transparent gap-x-4 flex items-center"
@@ -75,13 +75,13 @@ const Leaderboard = () => {
               <FontAwesomeIcon icon={faBars} />
               Problems
             </Link>
-            <a
-              href="/settings"
+            <Link
+              to="/settings"
               className="bg-transparent gap-x-4 flex items-center"
             >
               <FontAwesomeIcon icon={faGear} />
               Settings
-            </a>
+            </Link>
           </div>
           <div className="m-6 bg-transparent">
             <img src="src/assets/Saly.svg" className="bg-transparent" />
@@ -94,34 +94,34 @@ const Leaderboard = () => {
           </div>
           {/* Sidebar menu */}
           <div className="flex gap-x-4 bg-transparent sm:text-base text-xs">
-            <a
-              href="/dashboard"
+            <Link
+              to="/dashboard"
               className="bg-transparent sm:gap-x-4 gap-x-1 flex items-center"
             >
               <FontAwesomeIcon icon={faIdBadge} className="sm:w-auto w-3" />
               Profile
-            </a>
-            <a
-              href="/leaderboard"
+            </Link>
+            <Link
+              to="/leaderboard"
               className="bg-transparent sm:gap-x-4 gap-x-1 flex items-center"
             >
               <FontAwesomeIcon icon={faMedal} className="sm:w-auto w-3" />
               Leaderboard
-            </a>
-            <a
-              href="/problems"
+            </Link>
+            <Link
+              to="/problems"
               className="bg-transparent sm:gap-x-4 gap-x-1 flex items-center"
             >
               <FontAwesomeIcon icon={faBars} className="sm:w-auto w-3" />
               Problems
-            </a>
-            <a
-              href="/settings"
+            </Link>
+            <Link
+              to="/settings"
               className="bg-transparent sm:gap-x-4 gap-x-1 flex items-center"
             >
               <FontAwesomeIcon icon={faGear} className="sm:w-auto w-3" />
               Settings
-            </a>
+            </Link>
           </div>
         </div>
         {/* main content */}
