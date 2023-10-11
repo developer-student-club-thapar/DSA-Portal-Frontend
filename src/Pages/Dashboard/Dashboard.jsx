@@ -13,6 +13,9 @@ const Dashboard = () => {
   const [credentials] = useContext(CredentialsContext);
   const leetcodeUserName = credentials.leetcodeUserName;
   const [problems, setProblems] = useState([]);
+  const [rank, setRank] = useState(0);
+  const [userAvatar, setUserAvatar] = useState("");
+  const [totalSolved, setTotalSolved] = useState(0);
 
   const checkProblems = async () => {
     try {
@@ -30,6 +33,10 @@ const Dashboard = () => {
       if (response.ok) {
         const data = await response.json();
         setProblems(data.solvedProblems);
+        setRank(data.rank);
+        setUserAvatar(data.userAvatar);
+        setTotalSolved(data.totalSubmissions);
+        console.log(userAvatar);
       } else {
         console.error("Failed to fetch problems data");
       }
@@ -42,8 +49,6 @@ const Dashboard = () => {
     checkProblems();
   }, []);
 
-  console.log(problems);
-
   return (
     <Fragment>
       <div className="flex flex-col md:flex-row min-h-screen bg-white">
@@ -52,11 +57,13 @@ const Dashboard = () => {
           <div className="flex flex-col gap-10 mt-14 px-5 mr-0 justify-center items-center">
             <div className="flex flex-row justify-start gap-[90px]">
               <div className="flex flex-row items-center gap-[50px] justify-center">
-                <div className="border-blue-500 border-4 rounded-lg w-[148px] h-[144px]"></div>
+                <div className="border-blue-500 border-4 rounded-lg w-[148px] h-[144px] flex justify-center items-center p-2">
+                  <img src={userAvatar} alt="" />
+                </div>
                 <div className="flex flex-col">
                   <span className="text-2xl">{credentials.name}</span>
                   <span className="font-bold text-2xl">{leetcodeUserName}</span>
-                  <span className="text-2xl">Rank: 31</span>
+                  <span className="text-2xl">Rank: {rank}</span>
                 </div>
               </div>
             </div>
@@ -86,7 +93,7 @@ const Dashboard = () => {
           <div className="language">
             <div className="font-bold text-2xl mt-4">Stats</div>
             <div className="flex flex-col mt-4 gap-6 w-32 text-center">
-              <div className="">Total Solved: 35</div>
+              <div className="">Total Solved: {totalSolved}</div>
               <div className="">Sheet Solved: 18</div>
             </div>
           </div>
