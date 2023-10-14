@@ -1,14 +1,13 @@
-import { Fragment, useContext, useEffect, useState } from 'react';
-import './Leaderboard.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Fragment } from "react";
+import "./Leaderboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faGear,
   faIdBadge,
   faMedal,
-} from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import { CredentialsContext } from '../../App';
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const LeaderboardCard = () => {
   return (
@@ -37,46 +36,14 @@ const LeaderboardCard = () => {
 };
 
 const Leaderboard = () => {
-  const tableHeads = ['Rank', 'Profile', 'No.of Questions'];
-
-  const [credentials] = useContext(CredentialsContext);
-  const [leaderboard, setLeaderboard] = useState([]);
-
-  const getLeaderboard = async () => {
-    try {
-      const response = await fetch(`http://localhost:5000/api/user`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${credentials.token}`,
-        },
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        const LB = data.map((user) => {
-          return {
-            leetcodeUserName: user.leetcodeUserName,
-            solvedProblems: data[0].solvedProblems,
-            problemsCount: user.solvedProblems.length,
-          };
-        });
-        console.log(LB);
-        const sortLB = LB.sort((a, b) => b.problemsCount - a.problemsCount);
-        setLeaderboard(sortLB);
-        console.log(leaderboard);
-      } else {
-        console.error('Failed to fetch leaderboard data');
-      }
-    } catch (error) {
-      console.error('Error while fetching leaderboard data:', error);
-    }
-  };
-
-  useEffect(() => {
-    getLeaderboard();
-  }, []);
-
+  const tableHeads = [
+    "Rank",
+    "Profile",
+    "User ID",
+    "Speed",
+    "No.of Questions",
+    "Score",
+  ];
   return (
     <Fragment>
       <div className="md:grid flex flex-col grid-cols-5 h-screen text-[#434343]">
@@ -181,7 +148,7 @@ const Leaderboard = () => {
             </div>
             <div className="w-[25%] flex flex-col gap-y-2 bg-white">
               <div className="bg-[#B5DBFA] rounded-md md:rounded-tr-md rounded-tr-3xl p-4 text-center">
-                Rank:{' '}
+                Rank:{" "}
                 <span className="bg-[#66BB6A] lg:text-xl text-white rounded-full px-2 py-1">
                   #1
                 </span>
@@ -216,9 +183,9 @@ const Leaderboard = () => {
                 </tr>
               </thead>
               <tbody className="">
-                {leaderboard.map((user, index) => (
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rank, index) => (
                   <tr key={index} className="text-center text-lg">
-                    <td className="py-2">{index + 1}</td>
+                    <td className="py-2">{rank}</td>
                     <td className="py-2">
                       <div className="flex gap-x-2 justify-center items-center">
                         <div className="border-2 border-white border-solid rounded-full bg-[#e1e1e1] -mx-1 w-5 h-5">
@@ -228,10 +195,13 @@ const Leaderboard = () => {
                             className="bg-transparent"
                           />
                         </div>
-                        <div>{user.leetcodeUserName}</div>
+                        <div>Skai Lord</div>
                       </div>
                     </td>
-                    <td className="py-2">{user.problemsCount}</td>
+                    <td className="py-2">1234567890</td>
+                    <td className="py-2">Speed</td>
+                    <td className="py-2">1000</td>
+                    <td className="py-2">10201</td>
                   </tr>
                 ))}
               </tbody>
@@ -247,12 +217,12 @@ const Leaderboard = () => {
               </button>
               <div>Page 1 of 10</div>
               <button className="hover:bg-[#87b9f8] p-2 font-medium flex items-center rounded-md">
-                next{' '}
+                next{" "}
                 <img
                   src="src/assets/rightArrow.svg"
                   alt="next arrow"
                   className="bg-transparent ml-2"
-                />{' '}
+                />{" "}
               </button>
             </div>
           </div>
