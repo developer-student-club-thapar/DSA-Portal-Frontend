@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 const Dashboard = () => {
   const [credentials] = useContext(CredentialsContext);
   const leetcodeUserName = credentials.leetcodeUserName;
+  localStorage.setItem("username", leetcodeUserName);
   const [problems, setProblems] = useState([]);
   const [rank, setRank] = useState(0);
   const [userAvatar, setUserAvatar] = useState("");
@@ -19,6 +20,9 @@ const Dashboard = () => {
 
   const checkProblems = async () => {
     try {
+      console.log("check problems");
+      console.log(credentials.token);
+      console.log(leetcodeUserName);
       const response = await fetch(
         `http://localhost:1000/api/user/${leetcodeUserName}`,
         {
