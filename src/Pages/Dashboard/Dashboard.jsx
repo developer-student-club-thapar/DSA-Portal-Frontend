@@ -17,6 +17,7 @@ const Dashboard = () => {
   const [rank, setRank] = useState(0);
   const [userAvatar, setUserAvatar] = useState("");
   const [totalSolved, setTotalSolved] = useState(0);
+  const [language, setLanguage] = useState([]);
 
   const checkProblems = async () => {
     try {
@@ -40,6 +41,11 @@ const Dashboard = () => {
         setRank(data.rank);
         setUserAvatar(data.userAvatar);
         setTotalSolved(data.totalSubmissions);
+        const langs = Array.from(
+          new Set(data.solvedProblems.map((p) => p.lang))
+        );
+        setLanguage(langs);
+        console.log(langs);
         console.log(userAvatar);
       } else {
         console.error("Failed to fetch problems data");
@@ -83,12 +89,13 @@ const Dashboard = () => {
           <div className="language mt-[40px]">
             <div className="font-bold text-2xl mt-4">Languages</div>
             <div className="flex lg:flex-col mt-4 gap-2 w-32 text-center language-inside">
-              <div className="border-2 border-[#4285F4] p-4 rounded-3xl">
-                C++
-              </div>
-              <div className="border-2 border-[#4285F4] p-4 rounded-3xl">
-                Python
-              </div>
+              {language.map((lang) => {
+                return (
+                  <div className="border-2 border-[#4285F4] p-4 rounded-3xl">
+                    {lang}
+                  </div>
+                );
+              })}
             </div>
           </div>
           <div className="justify-center items-center hr my-8 ">

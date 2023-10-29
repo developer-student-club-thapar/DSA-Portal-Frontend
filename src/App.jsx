@@ -18,6 +18,7 @@ function App() {
     leetcodeUserName: localStorage.getItem("username") || "",
     name: localStorage.getItem("name") || "",
   });
+
   return (
     <CredentialsContext.Provider value={credentialsState}>
       <Fragment>
@@ -25,8 +26,14 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
-            <Route path="/leaderboard" element={<Leaderboard />} />
-            <Route path="/dashboard/" element={<Dashboard />} />
+            <Route
+              path="/leaderboard"
+              element={credentialsState[0].token ? <Leaderboard /> : <Signin />}
+            />
+            <Route
+              path="/dashboard"
+              element={credentialsState[0].token ? <Dashboard /> : <Signin />}
+            />
           </Routes>
         </BrowserRouter>
       </Fragment>

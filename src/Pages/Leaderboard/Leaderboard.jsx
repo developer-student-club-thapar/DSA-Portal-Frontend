@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { CredentialsContext } from "../../App";
 
 const LeaderboardCard = () => {
+  const [credentials] = useContext(CredentialsContext);
+
   return (
     <div className="w-full bg-[#B5DBFA] hover:drop-shadow-sm rounded-md flex justify-between p-4 sm:text-sm text-xs">
       <div className="flex gap-x-4 items-center">
@@ -172,7 +174,7 @@ const Leaderboard = () => {
               </div>
               <div className="ml-6 flex flex-col gap-y-0.25">
                 <div className="font-medium md:text-3xl sm:text-xl text-lg">
-                  Hello, Skai
+                  Hello, {credentials.name}
                 </div>
                 <div className="md:text-lg sm:text-base text-sm">
                   Welcome back to the leaderboard
