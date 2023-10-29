@@ -12,7 +12,7 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
   const [check, setCheck] = useState(false);
-  const [, setCredentials] = useContext(CredentialsContext);
+  const [credentials, setCredentials] = useContext(CredentialsContext);
 
   const handleLogin = async () => {
     await axios
@@ -25,7 +25,11 @@ const Signin = () => {
           setToken(res.data);
           setCredentials(res.data);
           if (check) {
-            localStorage.setItem("token", token);
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("name", res.data.name);
+            console.log(res.data.token);
+            localStorage.setItem("email", email);
+            localStorage.setItem("check", check);
           }
         }
       })

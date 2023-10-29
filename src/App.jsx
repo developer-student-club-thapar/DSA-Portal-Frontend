@@ -11,10 +11,12 @@ export const CredentialsContext = React.createContext();
 
 function App() {
   const credentialsState = useState({
-    email: "",
+    email: localStorage.getItem("email") || "",
     password: "",
-    token: "",
-    check: false,
+    token: localStorage.getItem("token") || "",
+    check: localStorage.getItem("check") || "",
+    leetcodeUserName: localStorage.getItem("username") || "",
+    name: localStorage.getItem("name") || "",
   });
   return (
     <CredentialsContext.Provider value={credentialsState}>

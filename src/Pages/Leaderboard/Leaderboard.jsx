@@ -1,14 +1,14 @@
-import { Fragment, useContext, useEffect, useState } from 'react';
-import './Leaderboard.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Fragment, useContext, useEffect, useState } from "react";
+import "./Leaderboard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
   faGear,
   faIdBadge,
   faMedal,
-} from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import { CredentialsContext } from '../../App';
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { CredentialsContext } from "../../App";
 
 const LeaderboardCard = () => {
   return (
@@ -37,17 +37,17 @@ const LeaderboardCard = () => {
 };
 
 const Leaderboard = () => {
-  const tableHeads = ['Rank', 'Profile', 'No.of Questions'];
+  const tableHeads = ["Rank", "Profile", "No.of Questions"];
 
   const [credentials] = useContext(CredentialsContext);
   const [leaderboard, setLeaderboard] = useState([]);
 
   const getLeaderboard = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user`, {
-        method: 'GET',
+      const response = await fetch(`http://localhost:1000/api/user`, {
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           Authorization: `Bearer ${credentials.token}`,
         },
       });
@@ -66,10 +66,10 @@ const Leaderboard = () => {
         setLeaderboard(sortLB);
         console.log(leaderboard);
       } else {
-        console.error('Failed to fetch leaderboard data');
+        console.error("Failed to fetch leaderboard data");
       }
     } catch (error) {
-      console.error('Error while fetching leaderboard data:', error);
+      console.error("Error while fetching leaderboard data:", error);
     }
   };
 
@@ -181,7 +181,7 @@ const Leaderboard = () => {
             </div>
             <div className="w-[25%] flex flex-col gap-y-2 bg-white">
               <div className="bg-[#B5DBFA] rounded-md md:rounded-tr-md rounded-tr-3xl p-4 text-center">
-                Rank:{' '}
+                Rank:{" "}
                 <span className="bg-[#66BB6A] lg:text-xl text-white rounded-full px-2 py-1">
                   #1
                 </span>
@@ -247,12 +247,12 @@ const Leaderboard = () => {
               </button>
               <div>Page 1 of 10</div>
               <button className="hover:bg-[#87b9f8] p-2 font-medium flex items-center rounded-md">
-                next{' '}
+                next{" "}
                 <img
                   src="src/assets/rightArrow.svg"
                   alt="next arrow"
                   className="bg-transparent ml-2"
-                />{' '}
+                />{" "}
               </button>
             </div>
           </div>
