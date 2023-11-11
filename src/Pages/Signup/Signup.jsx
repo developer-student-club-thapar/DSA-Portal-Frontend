@@ -12,8 +12,9 @@ const Signup = () => {
     fname: "",
     lname: "",
     email: "",
-    username: "",
+    leetcodeUserName: "",
     password: "",
+    leetcodeCookies: "",
     confirmPassword: "",
     name: "",
   });
@@ -89,8 +90,8 @@ const Signup = () => {
         <br />
         <input
           type="text"
-          id="username"
-          name="username"
+          id="leetcodeCookies"
+          name="leetcodeCookies"
           required
           className="form"
           onChange={handleInputChange}
@@ -102,8 +103,8 @@ const Signup = () => {
         <br />
         <input
           type="text"
-          id="username"
-          name="username"
+          id="leetcodeUserName"
+          name="leetcodeUserName"
           required
           className="form"
           onChange={handleInputChange}
