@@ -2,7 +2,7 @@
 .heading{
     position: absolute;
     margin-left: 40%;
-    margin-top: 7%;
+    margin-top: 3%;
     font-family: 'GoogleSansDisplay';
     font-size: 200%;
     font-weight: 900;
@@ -29,7 +29,7 @@
 
 .whole{
     position: absolute;
-    margin-top: 12%;
+    margin-top: 8%;
     margin-left: 40%;
     font-family: 'GoogleSansDisplay';
     font-weight: normal;
@@ -80,7 +80,10 @@
     top: 48.5ex;
 }
 .form9{
-    top: 59.5ex;
+    top: 61ex;
+}
+.form10{
+    top: 62.5ex;
 }
 
 .Submit{

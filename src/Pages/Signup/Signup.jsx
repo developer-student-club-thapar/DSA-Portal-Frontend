@@ -96,7 +96,20 @@ const Signup = () => {
           onChange={handleInputChange}
         />
         <br />
-        <label htmlFor="pwd" className="form3 form7">
+        <label type="fname" className="form3 form7">
+          Leetcode Username
+        </label>
+        <br />
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          className="form"
+          onChange={handleInputChange}
+        />
+        <br />
+        <label htmlFor="pwd" className="form3 form8">
           Password
         </label>
         <br />
@@ -109,7 +122,7 @@ const Signup = () => {
           onChange={handleInputChange}
         />
         <br />
-        <label htmlFor="pwd" className="form3 form8">
+        <label htmlFor="pwd" className="form3 form9">
           Confirm Password
         </label>
         <br />
@@ -118,7 +131,7 @@ const Signup = () => {
           id="pwd"
           name="confirmPassword"
           required
-          className="form form9"
+          className="form form10"
           onChange={handleInputChange}
         />
         <br />
